@@ -4,7 +4,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Navbar = () => {
   return (
-    <div className="border-b-2 border-gray-400 mx-12 h-14">
+    <div className="border-b-2 border-gray-400 mx-12 h-14 sticky top-0 z-10 backdrop-blur-md bg-opacity-30 shadow-lg transition duration-300 ease-in-out">
       <div className=" flex justify-between items-center">
         <div className="text-4xl font-semibold text-white m-2">
           <a
