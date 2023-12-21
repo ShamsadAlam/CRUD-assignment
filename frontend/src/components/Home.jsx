@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import TaskCard from "./TaskCard";
-import { getTasks, createTask } from "./TaskAPI";
+import { getTasks } from "./TaskAPI";
 import axios from "axios";
+import { BASE_URL } from "./config";
 
 const Home = () => {
   const [tasks, setTasks] = useState([]);
@@ -16,7 +17,7 @@ const Home = () => {
 
   const TaskCreate = async () => {
     try {
-      await axios.post("http://localhost:5000/shamsad/task", newTask);
+      await axios.post(`${BASE_URL}/shamsad/task`, newTask);
       getTasks();
       window.location.reload();
       setShowCreateForm(false);

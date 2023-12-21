@@ -4,6 +4,7 @@ import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 import { getTasks, DeleteTask } from "./TaskAPI";
+import { BASE_URL } from "./config";
 
 const TaskCard = ({ item }) => {
   const [isEditing, setEditing] = useState(false);
@@ -16,7 +17,7 @@ const TaskCard = ({ item }) => {
 
   const handleSave = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/shamsad/task/${id}`, {
+      await axios.put(`${BASE_URL}/shamsad/task/${id}`, {
         title: editedTitle,
         description: editedDescription,
       });
