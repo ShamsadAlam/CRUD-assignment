@@ -1,0 +1,14 @@
+/* For WebKit browsers (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.5rem; /* Set the width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: gray; /* Set the color of the thumb */
+  border-radius: 2rem;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+}

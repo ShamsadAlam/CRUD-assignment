@@ -12,7 +12,7 @@ const Navbar = () => {
             target="_sham"
             className="hover:text-blue-300"
           >
-            NOBLE.
+            TASKS.
           </a>
         </div>
         <div className="w-32 flex justify-around">

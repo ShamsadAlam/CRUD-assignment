@@ -18,11 +18,10 @@ const Home = () => {
     getTasks();
   }, []);
   return (
-    <div className="border border-white text-white m-12 grid grid-cols-1 sm:grid-cols-2 md:gird-cols-2 lg:grid-cols-4 gap-8">
+    <div className="text-white m-12 grid grid-cols-2 sm:grid-cols-3 md:gird-cols-4 lg:grid-cols-5 gap-8">
       {tasks.map((item) => (
         <TaskCard item={item} />
       ))}
-      {/* <TaskCard /> */}
     </div>
   );
 };
