@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import TaskCard from "./TaskCard";
 
 const Home = () => {
   const [tasks, setTasks] = useState([]);
@@ -17,10 +18,11 @@ const Home = () => {
     getTasks();
   }, []);
   return (
-    <div className="border border-white text-white mx-12">
+    <div className="border border-white text-white m-12 grid grid-cols-1 sm:grid-cols-2 md:gird-cols-2 lg:grid-cols-4 gap-8">
       {tasks.map((item) => (
-        <h2>{item.title}</h2>
+        <TaskCard item={item} />
       ))}
+      {/* <TaskCard /> */}
     </div>
   );
 };
